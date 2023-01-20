@@ -22,6 +22,10 @@ app.use(
 
 // routes
 
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World" });
+});
+
 app.use("/api/v1/messages", messages);
 // app.use(notFound);
 // app.use(errorHandlerMiddleware);
