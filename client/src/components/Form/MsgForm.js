@@ -5,7 +5,10 @@ const MsgForm = ({ getData }) => {
   const [msg, setMsg] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/v1/messages", { value: msg });
+    await axios.post(
+      "https://message-phjc15g3s-a-padhy.vercel.app/api/v1/messages",
+      { value: msg }
+    );
     setMsg("");
     getData();
   };
