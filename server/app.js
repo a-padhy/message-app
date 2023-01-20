@@ -14,9 +14,8 @@ app.use(express.static("../client/public"));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["*"],
+    origin: true,
     credentials: true,
-    optionsSuccessStatus: 204,
   })
 );
 
