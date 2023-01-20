@@ -12,7 +12,9 @@ const SingleMessage = () => {
           data: {
             message: { value: msgVal },
           },
-        } = await axios.get(`http://localhost:5000/api/v1/messages/${id}`);
+        } = await axios.get(
+          `https://message-phjc15g3s-a-padhy.vercel.app/api/v1/messages/${id}`
+        );
         setMsg(msgVal);
       } catch (error) {
         console.log(error);

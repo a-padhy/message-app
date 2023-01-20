@@ -11,7 +11,9 @@ const Home = () => {
   const getData = async () => {
     const {
       data: { messages: msgs },
-    } = await axios.get("http://localhost:5000/api/v1/messages");
+    } = await axios.get(
+      "https://message-phjc15g3s-a-padhy.vercel.app/api/v1/messages"
+    );
     setMessages(msgs);
   };
   useEffect(() => {
